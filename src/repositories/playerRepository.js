@@ -23,23 +23,23 @@ module.exports = {
 
 
 
-const test = async () => {
-    try {
-        const created = await create("test789");
-        console.log("Created: ",created);
+// const test = async () => {
+//     try {
+//         const created = await create("test789");
+//         console.log("Created: ",created);
 
-        const player = await getById(created.id);
-        console.log("Player: ", player)
-        return;
-    } catch (error) {
-        console.log(error.code)
-        console.log(error.table_name)
-        console.log(error.constraint_name)
-        console.log(error.detail)
-        return;
-    } finally {
-        process.exit(0)
-    }
-}
+//         const player = await getById(created.id);
+//         console.log("Player: ", player)
+//         return;
+//     } catch (error) {
+//         console.log(error.code)
+//         console.log(error.table_name)
+//         console.log(error.constraint_name)
+//         console.log(error.detail)
+//         return;
+//     } finally {
+//         process.exit(0)
+//     }
+// }
 
-test();
+// test();
