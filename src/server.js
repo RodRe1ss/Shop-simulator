@@ -1,16 +1,3 @@
-const sql = require("./db.js");
-
-const testConnection = async () => {
-  try {
-    await sql`SELECT 1`;
-    console.log("Connected to PostgreSQL");
-  } catch (err) {
-    console.error(err);
-  }
-};
-
-testConnection();
-
 require("dotenv").config();
 
 const express = require("express");
