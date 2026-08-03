@@ -1,10 +1,10 @@
-const playerServ = require("../services/playerServices")
+const playerServices = require("../services/playerServices")
 
 const create = async (req, res) => {
     try {
         const { username } = req.body
 
-        const player = await playerServ.createPlayer(username);
+        const player = await playerServices.createPlayer(username);
 
         res.status(201).json(player)
     } catch (error) {
@@ -16,7 +16,7 @@ const create = async (req, res) => {
 
 const getById = async (req, res) => {
     try {
-        const player = await playerServ.getPlayerById(req.body.id)
+        const player = await playerServices.getPlayerById(req.params.id)
 
         if (!player) {
             return res.status(404).json({
@@ -31,3 +31,8 @@ const getById = async (req, res) => {
         })
     }
 }
+
+module.exports = {
+    create,
+    getById
+} 

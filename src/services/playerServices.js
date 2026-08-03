@@ -1,4 +1,4 @@
-const playerRepo = require("../repositories/playerRepository")
+const playerRepository = require("../repositories/playerRepository")
 
 const createPlayer = async (username) => {
     if (!username) {
@@ -9,11 +9,11 @@ const createPlayer = async (username) => {
         throw new Error("Username must be at least 3 characters.")
     }
 
-    return await playerRepo.create(username.trim())
+    return await playerRepository.create(username.trim())
 }
 
 const getPlayerById = async (id) => {
-    return await playerRepo.getById(id)
+    return await playerRepository.getById(id)
 }
 
 module.exports = {
@@ -41,4 +41,4 @@ const test = async () => {
     }
 }
 
-test();
+// test();

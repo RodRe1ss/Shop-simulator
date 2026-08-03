@@ -1,0 +1,15 @@
+### Create Player
+POST http://localhost:3000/players
+Content-Type: application/json
+
+{
+    "username": "denzooi"
+}
+
+
+### Get Player
+GET http://localhost:3000/players/plyr:jwGDIxrp0COFfi5bJJxsQ
+
+
+### Test an ID that doesnt work
+GET http://localhost:3000/players/plyr:jwGDIxrp0COFfi5bJJxsW
