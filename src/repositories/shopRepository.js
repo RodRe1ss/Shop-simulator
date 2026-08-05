@@ -37,13 +37,15 @@ module.exports = {
 const test = async () => {
   try {
     const created = await create("plyr:jwGDIxrp0COFfi5bJJxsQ", "test123");
-    console.log("Created: ", created);
+    created && console.log("Created: ", created);
 
-    const shop = await getById(created.id);
-    console.log("Shop: ", shop);
+    if (created) {
+      const shop = await getById(created.id);
+      console.log("Shop: ", shop);
 
-    const playerShop = await getByPlayerId(created.player_id);
-    console.log("Player Shop: ", playerShop);
+      const playerShop = await getByPlayerId(created.player_id);
+      console.log("Player Shop: ", playerShop);
+    }
 
     return;
   } catch (error) {
@@ -57,4 +59,4 @@ const test = async () => {
   }
 };
 
-test();
+// test();
