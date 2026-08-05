@@ -23,7 +23,7 @@ const createShop = async (playerId, name) => {
   const existingShop = await shopRepository.getByPlayerId(playerId);
 
   if (existingShop) {
-    throw new Error("Player already owns a shopS");
+    throw new Error("Player already owns a shop");
   }
 
   return await shopRepository.create(playerId, name.trim());
