@@ -14,7 +14,7 @@ const create = async (req, res) => {
   }
 };
 
-const getById = async (id) => {
+const getById = async (req, res) => {
   try {
     const shop = await shopServices.getShopById(req.params.id);
 

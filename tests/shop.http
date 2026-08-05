@@ -1,0 +1,16 @@
+### Create Shop
+POST http://localhost:3000/shop
+Content-Type: application/json
+
+{
+    "playerId": "plyr:jwGDIxrp0COFfi5bJJxsQ",
+    "name": "test-shop123"
+}
+
+
+### Get Shop By Id
+GET http://localhost:3000/shop/shop:h5Uvdc9TQDYdBwanjkwFC
+
+
+### Testing an ID that doesn't work
+GET http://localhost:3000/shop/shop:h5Uvdc9TQDYdBwanjkwFc
