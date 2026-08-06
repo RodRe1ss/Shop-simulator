@@ -1,4 +1,4 @@
-const productServices = require("../services/productsServices");
+const productsServices = require("../services/productsServices");
 
 const getAll = async (req, res) => {
   try {
@@ -14,9 +14,9 @@ const getAll = async (req, res) => {
 
 const getById = async (req, res) => {
   try {
-    const product = await productsServices.getProductById();
+    const product = await productsServices.getProductById(req.params.id);
 
-    res.status(200).json(products);
+    res.status(200).json(product);
   } catch (error) {
     res.status(404).json({
       error: error.message,
